@@ -56,12 +56,15 @@ final class LocationService: NSObject, CLLocationManagerDelegate {
     }
 
     nonisolated func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
-        Task { @MainActor in
-            accuracyReduced = manager.accuracyAuthorization == .reducedAccuracy
-            switch manager.authorizationStatus {
+        let accuracyAuthorization = manager.accuracyAuthorization
+        let authorizationStatus = manager.authorizationStatus
+        Task { @MainActor [weak self] in
+            guard let self else { return }
+            accuracyReduced = accuracyAuthorization == .reducedAccuracy
+            switch authorizationStatus {
             case .authorizedAlways, .authorizedWhenInUse:
                 state = .requesting
-                manager.requestLocation()
+                self.manager.requestLocation()
             case .denied, .restricted:
                 state = .denied
             case .notDetermined:
@@ -74,17 +77,20 @@ final class LocationService: NSObject, CLLocationManagerDelegate {
 
     nonisolated func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let latest = locations.last else { return }
-        Task { @MainActor in
-            coordinate = latest.coordinate
+        let latestCoordinate = latest.coordinate
+        Task { @MainActor [weak self] in
+            guard let self else { return }
+            coordinate = latestCoordinate
             state = .available
         }
     }
 
     nonisolated func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        Task { @MainActor in state = .unavailable }
+        Task { @MainActor [weak self] in self?.state = .unavailable }
     }
 
     nonisolated func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
-        Task { @MainActor in onRegionExit?(region.identifier) }
+        let identifier = region.identifier
+        Task { @MainActor [weak self] in self?.onRegionExit?(identifier) }
     }
 }
