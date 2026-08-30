@@ -103,14 +103,14 @@ actor APIClient {
 
     private func mapError(data: Data, status: Int) -> ParkGoError {
         let envelope = try? JSONDecoder.parkGo.decode(ErrorEnvelopeDTO.self, from: data)
-        switch envelope?.error.code {
-        case "PROVIDER_UNAVAILABLE": .providerUnavailable
-        case "SESSION_ALREADY_ACTIVE": .sessionAlreadyActive
-        case "PAYMENT_FAILED": .paymentFailed
-        case "TOKEN_EXPIRED", "AUTHENTICATION_REQUIRED": .authenticationRequired
+        return switch envelope?.error.code {
+        case "PROVIDER_UNAVAILABLE": ParkGoError.providerUnavailable
+        case "SESSION_ALREADY_ACTIVE": ParkGoError.sessionAlreadyActive
+        case "PAYMENT_FAILED": ParkGoError.paymentFailed
+        case "TOKEN_EXPIRED", "AUTHENTICATION_REQUIRED": ParkGoError.authenticationRequired
         default:
-            envelope.map { .server(message: $0.error.message) }
-                ?? .server(message: "Сервис временно недоступен (\(status)).")
+            envelope.map { ParkGoError.server(message: $0.error.message) }
+                ?? ParkGoError.server(message: "Сервис временно недоступен (\(status)).")
         }
     }
 }
