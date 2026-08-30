@@ -10,7 +10,7 @@ final class ParkingSessionStore {
     private let liveActivity: LiveActivityService
     private let location: LocationService
     private let notifications: NotificationService
-    private var timerTask: Task<Void, Never>?
+    nonisolated(unsafe) private var timerTask: Task<Void, Never>?
 
     var activeSession: ParkingSession?
     var now = Date.now
