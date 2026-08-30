@@ -2,8 +2,13 @@ import Foundation
 
 actor DemoParkingRepository: ParkingRepository {
     private let user = User(id: UUID(), email: "demo@parkgo.local", firstName: "Алексей")
-    private var vehicleValues: [Vehicle] = [
-        Vehicle(
+    private var vehicleValues: [Vehicle]
+    private let zoneValues: [ParkingZone]
+    private var active: ParkingSession?
+    private var historyValues: [ParkingSession]
+
+    init() {
+        let vehicle = Vehicle(
             id: UUID(),
             plateNumber: "А123АА",
             regionCode: "23",
@@ -13,19 +18,14 @@ actor DemoParkingRepository: ParkingRepository {
             color: "Белый",
             isDefault: true
         )
-    ]
-    private let zoneValues: [ParkingZone] = [
+        let zones = [
         ParkingZone(id: UUID(), zoneNumber: "1001", name: "Красная / Северная", address: "ул. Красная, 122", latitude: 45.0356, longitude: 38.9754, distanceMeters: 24, hourlyRate: 60, currency: "RUB", activeFrom: "08:00", activeUntil: "20:00", isActive: true),
         ParkingZone(id: UUID(), zoneNumber: "1002", name: "Красная / Головатого", address: "ул. Красная, 145", latitude: 45.0391, longitude: 38.9748, distanceMeters: 405, hourlyRate: 60, currency: "RUB", activeFrom: "08:00", activeUntil: "20:00", isActive: true),
         ParkingZone(id: UUID(), zoneNumber: "1003", name: "Театральная площадь", address: "Театральная площадь", latitude: 45.0330, longitude: 38.9747, distanceMeters: 279, hourlyRate: 70, currency: "RUB", activeFrom: "08:00", activeUntil: "22:00", isActive: true)
-    ]
-    private var active: ParkingSession?
-    private var historyValues: [ParkingSession] = []
+        ]
 
-    init() {
-        let vehicle = vehicleValues[0]
         let now = Date.now
-        historyValues = (0..<3).map { index in
+        let history = (0..<3).map { index in
             let start = now.addingTimeInterval(Double(-(index + 1) * 86_400 - 6_000))
             return ParkingSession(
                 id: UUID(),
@@ -37,9 +37,12 @@ actor DemoParkingRepository: ParkingRepository {
                 currency: "RUB",
                 paymentStatus: .paid,
                 vehicle: vehicle,
-                parkingZone: zoneValues[index]
+                parkingZone: zones[index]
             )
         }
+        self.vehicleValues = [vehicle]
+        self.zoneValues = zones
+        self.historyValues = history
     }
 
     func signIn(email: String, password: String) async throws -> User { user }
