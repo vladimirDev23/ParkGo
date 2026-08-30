@@ -34,9 +34,26 @@
 		200000000000000000000004 /* ParkGoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParkGoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		510000000000000000000001 /* Exceptions for ParkGo in ParkGo target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Resources/Info.plist,
+			);
+			target = 700000000000000000000001 /* ParkGo */;
+		};
+		510000000000000000000002 /* Exceptions for ParkGoLiveActivity in ParkGoLiveActivity target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 700000000000000000000002 /* ParkGoLiveActivity */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		500000000000000000000001 /* ParkGo */ = {isa = PBXFileSystemSynchronizedRootGroup; path = ParkGo; sourceTree = "<group>"; };
-		500000000000000000000002 /* ParkGoLiveActivity */ = {isa = PBXFileSystemSynchronizedRootGroup; path = ParkGoLiveActivity; sourceTree = "<group>"; };
+		500000000000000000000001 /* ParkGo */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (510000000000000000000001 /* Exceptions for ParkGo in ParkGo target */, ); path = ParkGo; sourceTree = "<group>"; };
+		500000000000000000000002 /* ParkGoLiveActivity */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (510000000000000000000002 /* Exceptions for ParkGoLiveActivity in ParkGoLiveActivity target */, ); path = ParkGoLiveActivity; sourceTree = "<group>"; };
 		500000000000000000000003 /* Shared */ = {isa = PBXFileSystemSynchronizedRootGroup; path = Shared; sourceTree = "<group>"; };
 		500000000000000000000004 /* ParkGoTests */ = {isa = PBXFileSystemSynchronizedRootGroup; path = ParkGoTests; sourceTree = "<group>"; };
 		500000000000000000000005 /* ParkGoUITests */ = {isa = PBXFileSystemSynchronizedRootGroup; path = ParkGoUITests; sourceTree = "<group>"; };
