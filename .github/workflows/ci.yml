@@ -1,0 +1,41 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pip
+      - run: pip install -e 'backend[dev]'
+      - run: ruff check backend
+      - run: ruff format --check backend
+      - run: mypy backend/app
+      - run: pytest backend
+        env:
+          APP_ENV: test
+          TESTING: "true"
+          AUTO_CREATE_SCHEMA: "true"
+          SECRET_KEY: test-secret-key-with-more-than-thirty-two-characters
+          DATABASE_URL: sqlite+aiosqlite:///./parkgo-ci.db
+          REDIS_URL: redis://127.0.0.1:6399/15
+      - run: docker build backend
+
+  ios:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+      - run: swift run --package-path ios ParkGoCoreChecks
+      - run: >-
+          xcodebuild
+          -project ios/ParkGo.xcodeproj
+          -scheme ParkGo
+          -destination 'platform=iOS Simulator,name=iPhone 16'
+          CODE_SIGNING_ALLOWED=NO
+          test

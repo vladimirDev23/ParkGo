@@ -1,0 +1,198 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		100000000000000000000001 /* ParkGoLiveActivity.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 200000000000000000000002 /* ParkGoLiveActivity.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		300000000000000000000001 /* Widget proxy */ = {isa = PBXContainerItemProxy; containerPortal = 900000000000000000000001 /* Project object */; proxyType = 1; remoteGlobalIDString = 700000000000000000000002; remoteInfo = ParkGoLiveActivity; };
+		300000000000000000000002 /* App test proxy */ = {isa = PBXContainerItemProxy; containerPortal = 900000000000000000000001 /* Project object */; proxyType = 1; remoteGlobalIDString = 700000000000000000000001; remoteInfo = ParkGo; };
+		300000000000000000000003 /* App UI test proxy */ = {isa = PBXContainerItemProxy; containerPortal = 900000000000000000000001 /* Project object */; proxyType = 1; remoteGlobalIDString = 700000000000000000000001; remoteInfo = ParkGo; };
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		400000000000000000000001 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (100000000000000000000001 /* ParkGoLiveActivity.appex in Embed App Extensions */, );
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		200000000000000000000001 /* ParkGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParkGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		200000000000000000000002 /* ParkGoLiveActivity.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ParkGoLiveActivity.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		200000000000000000000003 /* ParkGoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParkGoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		200000000000000000000004 /* ParkGoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParkGoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		500000000000000000000001 /* ParkGo */ = {isa = PBXFileSystemSynchronizedRootGroup; path = ParkGo; sourceTree = "<group>"; };
+		500000000000000000000002 /* ParkGoLiveActivity */ = {isa = PBXFileSystemSynchronizedRootGroup; path = ParkGoLiveActivity; sourceTree = "<group>"; };
+		500000000000000000000003 /* Shared */ = {isa = PBXFileSystemSynchronizedRootGroup; path = Shared; sourceTree = "<group>"; };
+		500000000000000000000004 /* ParkGoTests */ = {isa = PBXFileSystemSynchronizedRootGroup; path = ParkGoTests; sourceTree = "<group>"; };
+		500000000000000000000005 /* ParkGoUITests */ = {isa = PBXFileSystemSynchronizedRootGroup; path = ParkGoUITests; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		410000000000000000000001 /* App Frameworks */ = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+		410000000000000000000002 /* Widget Frameworks */ = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+		410000000000000000000003 /* Tests Frameworks */ = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+		410000000000000000000004 /* UI Tests Frameworks */ = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		600000000000000000000001 = {
+			isa = PBXGroup;
+			children = (
+				500000000000000000000001 /* ParkGo */,
+				500000000000000000000002 /* ParkGoLiveActivity */,
+				500000000000000000000003 /* Shared */,
+				500000000000000000000004 /* ParkGoTests */,
+				500000000000000000000005 /* ParkGoUITests */,
+				600000000000000000000002 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		600000000000000000000002 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				200000000000000000000001 /* ParkGo.app */,
+				200000000000000000000002 /* ParkGoLiveActivity.appex */,
+				200000000000000000000003 /* ParkGoTests.xctest */,
+				200000000000000000000004 /* ParkGoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		700000000000000000000001 /* ParkGo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A00000000000000000000001 /* App configs */;
+			buildPhases = (420000000000000000000001, 410000000000000000000001, 430000000000000000000001, 400000000000000000000001, );
+			buildRules = ();
+			dependencies = (800000000000000000000001 /* Widget dependency */, );
+			fileSystemSynchronizedGroups = (500000000000000000000001 /* ParkGo */, 500000000000000000000003 /* Shared */, );
+			name = ParkGo;
+			productName = ParkGo;
+			productReference = 200000000000000000000001 /* ParkGo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		700000000000000000000002 /* ParkGoLiveActivity */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A00000000000000000000002 /* Widget configs */;
+			buildPhases = (420000000000000000000002, 410000000000000000000002, 430000000000000000000002, );
+			buildRules = ();
+			dependencies = ();
+			fileSystemSynchronizedGroups = (500000000000000000000002 /* ParkGoLiveActivity */, 500000000000000000000003 /* Shared */, );
+			name = ParkGoLiveActivity;
+			productName = ParkGoLiveActivity;
+			productReference = 200000000000000000000002 /* ParkGoLiveActivity.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		700000000000000000000003 /* ParkGoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A00000000000000000000003 /* Test configs */;
+			buildPhases = (420000000000000000000003, 410000000000000000000003, 430000000000000000000003, );
+			buildRules = ();
+			dependencies = (800000000000000000000002 /* App test dependency */, );
+			fileSystemSynchronizedGroups = (500000000000000000000004 /* ParkGoTests */, );
+			name = ParkGoTests;
+			productName = ParkGoTests;
+			productReference = 200000000000000000000003 /* ParkGoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		700000000000000000000004 /* ParkGoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A00000000000000000000004 /* UI test configs */;
+			buildPhases = (420000000000000000000004, 410000000000000000000004, 430000000000000000000004, );
+			buildRules = ();
+			dependencies = (800000000000000000000003 /* App UI test dependency */, );
+			fileSystemSynchronizedGroups = (500000000000000000000005 /* ParkGoUITests */, );
+			name = ParkGoUITests;
+			productName = ParkGoUITests;
+			productReference = 200000000000000000000004 /* ParkGoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		900000000000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					700000000000000000000001 = {CreatedOnToolsVersion = 16.0; };
+					700000000000000000000002 = {CreatedOnToolsVersion = 16.0; };
+					700000000000000000000003 = {CreatedOnToolsVersion = 16.0; TestTargetID = 700000000000000000000001; };
+					700000000000000000000004 = {CreatedOnToolsVersion = 16.0; TestTargetID = 700000000000000000000001; };
+				};
+			};
+			buildConfigurationList = A00000000000000000000000 /* Project configs */;
+			compatibilityVersion = "Xcode 16.0";
+			developmentRegion = ru;
+			hasScannedForEncodings = 0;
+			knownRegions = (Base, en, ru, );
+			mainGroup = 600000000000000000000001;
+			productRefGroup = 600000000000000000000002 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (700000000000000000000001, 700000000000000000000002, 700000000000000000000003, 700000000000000000000004, );
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		430000000000000000000001 /* App Resources */ = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+		430000000000000000000002 /* Widget Resources */ = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+		430000000000000000000003 /* Tests Resources */ = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+		430000000000000000000004 /* UI Tests Resources */ = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		420000000000000000000001 /* App Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+		420000000000000000000002 /* Widget Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+		420000000000000000000003 /* Tests Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+		420000000000000000000004 /* UI Tests Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		800000000000000000000001 /* Widget dependency */ = {isa = PBXTargetDependency; target = 700000000000000000000002 /* ParkGoLiveActivity */; targetProxy = 300000000000000000000001 /* Widget proxy */; };
+		800000000000000000000002 /* App test dependency */ = {isa = PBXTargetDependency; target = 700000000000000000000001 /* ParkGo */; targetProxy = 300000000000000000000002 /* App test proxy */; };
+		800000000000000000000003 /* App UI test dependency */ = {isa = PBXTargetDependency; target = 700000000000000000000001 /* ParkGo */; targetProxy = 300000000000000000000003 /* App UI test proxy */; };
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		B00000000000000000000001 /* Project Debug */ = {isa = XCBuildConfiguration; buildSettings = {ALWAYS_SEARCH_USER_PATHS = NO; CLANG_ENABLE_MODULES = YES; CLANG_ENABLE_OBJC_ARC = YES; DEBUG_INFORMATION_FORMAT = dwarf; ENABLE_TESTABILITY = YES; GCC_C_LANGUAGE_STANDARD = gnu17; IPHONEOS_DEPLOYMENT_TARGET = 18.0; ONLY_ACTIVE_ARCH = YES; SDKROOT = iphoneos; SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)"; SWIFT_OPTIMIZATION_LEVEL = "-Onone"; }; name = Debug; };
+		B00000000000000000000002 /* Project Release */ = {isa = XCBuildConfiguration; buildSettings = {ALWAYS_SEARCH_USER_PATHS = NO; CLANG_ENABLE_MODULES = YES; CLANG_ENABLE_OBJC_ARC = YES; DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym"; ENABLE_NS_ASSERTIONS = NO; GCC_C_LANGUAGE_STANDARD = gnu17; IPHONEOS_DEPLOYMENT_TARGET = 18.0; SDKROOT = iphoneos; SWIFT_COMPILATION_MODE = wholemodule; VALIDATE_PRODUCT = YES; }; name = Release; };
+		B00000000000000000000003 /* App Debug */ = {isa = XCBuildConfiguration; buildSettings = {CODE_SIGN_ENTITLEMENTS = ParkGo/ParkGo.entitlements; CODE_SIGN_STYLE = Automatic; CURRENT_PROJECT_VERSION = 1; DEVELOPMENT_TEAM = ""; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = ParkGo/Resources/Info.plist; MARKETING_VERSION = 1.0; PRODUCT_BUNDLE_IDENTIFIER = com.parkgo.app; PRODUCT_NAME = "$(TARGET_NAME)"; SWIFT_STRICT_CONCURRENCY = complete; SWIFT_VERSION = 6.0; TARGETED_DEVICE_FAMILY = 1; }; name = Debug; };
+		B00000000000000000000004 /* App Release */ = {isa = XCBuildConfiguration; buildSettings = {CODE_SIGN_ENTITLEMENTS = ParkGo/ParkGo.entitlements; CODE_SIGN_STYLE = Automatic; CURRENT_PROJECT_VERSION = 1; DEVELOPMENT_TEAM = ""; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = ParkGo/Resources/Info.plist; MARKETING_VERSION = 1.0; PRODUCT_BUNDLE_IDENTIFIER = com.parkgo.app; PRODUCT_NAME = "$(TARGET_NAME)"; SWIFT_STRICT_CONCURRENCY = complete; SWIFT_VERSION = 6.0; TARGETED_DEVICE_FAMILY = 1; }; name = Release; };
+		B00000000000000000000005 /* Widget Debug */ = {isa = XCBuildConfiguration; buildSettings = {APPLICATION_EXTENSION_API_ONLY = YES; CODE_SIGN_STYLE = Automatic; CURRENT_PROJECT_VERSION = 1; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = ParkGoLiveActivity/Info.plist; MARKETING_VERSION = 1.0; PRODUCT_BUNDLE_IDENTIFIER = com.parkgo.app.liveactivity; PRODUCT_NAME = "$(TARGET_NAME)"; SKIP_INSTALL = YES; SWIFT_STRICT_CONCURRENCY = complete; SWIFT_VERSION = 6.0; TARGETED_DEVICE_FAMILY = 1; }; name = Debug; };
+		B00000000000000000000006 /* Widget Release */ = {isa = XCBuildConfiguration; buildSettings = {APPLICATION_EXTENSION_API_ONLY = YES; CODE_SIGN_STYLE = Automatic; CURRENT_PROJECT_VERSION = 1; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = ParkGoLiveActivity/Info.plist; MARKETING_VERSION = 1.0; PRODUCT_BUNDLE_IDENTIFIER = com.parkgo.app.liveactivity; PRODUCT_NAME = "$(TARGET_NAME)"; SKIP_INSTALL = YES; SWIFT_STRICT_CONCURRENCY = complete; SWIFT_VERSION = 6.0; TARGETED_DEVICE_FAMILY = 1; }; name = Release; };
+		B00000000000000000000007 /* Tests Debug */ = {isa = XCBuildConfiguration; buildSettings = {BUNDLE_LOADER = "$(TEST_HOST)"; CODE_SIGN_STYLE = Automatic; GENERATE_INFOPLIST_FILE = YES; PRODUCT_BUNDLE_IDENTIFIER = com.parkgo.app.tests; PRODUCT_NAME = "$(TARGET_NAME)"; SWIFT_VERSION = 6.0; TARGETED_DEVICE_FAMILY = 1; TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ParkGo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ParkGo"; }; name = Debug; };
+		B00000000000000000000008 /* Tests Release */ = {isa = XCBuildConfiguration; buildSettings = {BUNDLE_LOADER = "$(TEST_HOST)"; CODE_SIGN_STYLE = Automatic; GENERATE_INFOPLIST_FILE = YES; PRODUCT_BUNDLE_IDENTIFIER = com.parkgo.app.tests; PRODUCT_NAME = "$(TARGET_NAME)"; SWIFT_VERSION = 6.0; TARGETED_DEVICE_FAMILY = 1; TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ParkGo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ParkGo"; }; name = Release; };
+		B00000000000000000000009 /* UI Tests Debug */ = {isa = XCBuildConfiguration; buildSettings = {CODE_SIGN_STYLE = Automatic; GENERATE_INFOPLIST_FILE = YES; PRODUCT_BUNDLE_IDENTIFIER = com.parkgo.app.uitests; PRODUCT_NAME = "$(TARGET_NAME)"; SWIFT_VERSION = 6.0; TARGETED_DEVICE_FAMILY = 1; TEST_TARGET_NAME = ParkGo; }; name = Debug; };
+		B0000000000000000000000A /* UI Tests Release */ = {isa = XCBuildConfiguration; buildSettings = {CODE_SIGN_STYLE = Automatic; GENERATE_INFOPLIST_FILE = YES; PRODUCT_BUNDLE_IDENTIFIER = com.parkgo.app.uitests; PRODUCT_NAME = "$(TARGET_NAME)"; SWIFT_VERSION = 6.0; TARGETED_DEVICE_FAMILY = 1; TEST_TARGET_NAME = ParkGo; }; name = Release; };
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A00000000000000000000000 /* Project configs */ = {isa = XCConfigurationList; buildConfigurations = (B00000000000000000000001, B00000000000000000000002, ); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		A00000000000000000000001 /* App configs */ = {isa = XCConfigurationList; buildConfigurations = (B00000000000000000000003, B00000000000000000000004, ); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		A00000000000000000000002 /* Widget configs */ = {isa = XCConfigurationList; buildConfigurations = (B00000000000000000000005, B00000000000000000000006, ); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		A00000000000000000000003 /* Test configs */ = {isa = XCConfigurationList; buildConfigurations = (B00000000000000000000007, B00000000000000000000008, ); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		A00000000000000000000004 /* UI test configs */ = {isa = XCConfigurationList; buildConfigurations = (B00000000000000000000009, B0000000000000000000000A, ); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+/* End XCConfigurationList section */
+	};
+	rootObject = 900000000000000000000001 /* Project object */;
+}

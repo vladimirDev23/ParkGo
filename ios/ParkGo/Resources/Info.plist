@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleDisplayName</key>
+    <string>ParkGo</string>
+    <key>CFBundleIdentifier</key>
+    <string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+    <key>CFBundleInfoDictionaryVersion</key>
+    <string>6.0</string>
+    <key>CFBundleName</key>
+    <string>$(PRODUCT_NAME)</string>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    <key>CFBundleShortVersionString</key>
+    <string>1.0</string>
+    <key>CFBundleVersion</key>
+    <string>1</string>
+    <key>CFBundleURLTypes</key>
+    <array>
+        <dict>
+            <key>CFBundleURLSchemes</key>
+            <array><string>parkgo</string></array>
+        </dict>
+    </array>
+    <key>LSRequiresIPhoneOS</key>
+    <true/>
+    <key>NSFaceIDUsageDescription</key>
+    <string>ParkGo использует Face ID для подтверждения запуска тестовой парковки.</string>
+    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+    <string>Геопозиция помогает напомнить о завершении парковки после выезда из зоны.</string>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>ParkGo использует геопозицию, чтобы находить ближайшую парковочную зону.</string>
+    <key>NSSupportsLiveActivities</key>
+    <true/>
+    <key>UIApplicationSceneManifest</key>
+    <dict>
+        <key>UIApplicationSupportsMultipleScenes</key>
+        <false/>
+    </dict>
+    <key>UILaunchScreen</key>
+    <dict>
+        <key>UIColorName</key>
+        <string>LaunchBackground</string>
+    </dict>
+    <key>UIRequiredDeviceCapabilities</key>
+    <array><string>arm64</string></array>
+    <key>UISupportedInterfaceOrientations</key>
+    <array><string>UIInterfaceOrientationPortrait</string></array>
+</dict>
+</plist>

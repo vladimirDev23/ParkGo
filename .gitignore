@@ -1,36 +1,21 @@
-# macOS
 .DS_Store
-
-# IDE
-.idea/
-.vscode/
-*.xcuserstate
-xcuserdata/
-DerivedData/
-.swiftpm/xcode/package.xcworkspace/contents.xcworkspacedata
-
-# Python
-__pycache__/
-*.py[cod]
-.pytest_cache/
-.mypy_cache/
-.ruff_cache/
+.env
 .venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.build/
+.swiftpm/
+*.py[cod]
+*.db
+*.log
 .coverage
 htmlcov/
-
-# Environment and secrets
-.env
-.env.*
-!.env.example
-
-# Build artifacts
 build/
 dist/
-*.egg-info/
-
-# Logs
-*.log
-
-# Docker volumes and local data
-.data/
+DerivedData/
+*.xcuserstate
+xcuserdata/
+backend/.env
+backend/alembic.ini.local

@@ -1,0 +1,1 @@
+"""ParkGo backend application."""
